@@ -1,3 +1,5 @@
+-- Original script from: https://gist.github.com/C-Duv/03de85cafc2cd2324e9d856d5889e5cb
+
 commandArray = {}
 
 -- Name of the dummy Domoticz dimmer:
