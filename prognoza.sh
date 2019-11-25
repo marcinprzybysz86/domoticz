@@ -19,8 +19,7 @@ TEMPINT=${TEMP%.*}
 (( TEMPC="$TEMPINT-273" ))
 echo $TIME
 echo $TEMPC
-curl --silent 
-"$DOMO/json.htm?type=command&param=udevice&idx=$IDX&nvalue=0&svalue=$TEMPC"
+curl --silent "$DOMO/json.htm?type=command&param=udevice&idx=$IDX&nvalue=0&svalue=$TEMPC"
 
 rm -f pogoda.json
 
