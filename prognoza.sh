@@ -1,8 +1,8 @@
 ###############################
 # Marcin Przybysz
 ###############################
-# script to get temperature for the next 18 hrs and send it to domoticz 
-dummy temperature switch. 
+# script to get temperature for the next 18 hrs and 
+#send it to domoticz dummy temperature switch. 
 # Personally I've added it to crontab everyday at 12 am.
 
 #!/bin/bash
