@@ -11,8 +11,7 @@ LOC="warszawa,pl"
 IDX=<domoticz_dummy_temp_idx>
 DOMO="http://127.0.0.1:8080"
 
-curl "api.openweathermap.org/data/2.5/forecast?q=$LOC&appid=$APIKEY" -o 
-pogoda.json
+curl "api.openweathermap.org/data/2.5/forecast?q=$LOC&appid=$APIKEY" -o pogoda.json
 TIME=`cat pogoda.json | jq ".list[5].dt_txt"`
 TEMP=`cat pogoda.json | jq ".list[5].main.temp"`
 TEMPINT=${TEMP%.*}
@@ -20,6 +19,5 @@ TEMPINT=${TEMP%.*}
 echo $TIME
 echo $TEMPC
 curl --silent "$DOMO/json.htm?type=command&param=udevice&idx=$IDX&nvalue=0&svalue=$TEMPC"
-
 rm -f pogoda.json
 
